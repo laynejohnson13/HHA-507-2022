@@ -12,14 +12,28 @@ soup = BeautifulSoup(page.text, 'html.parser')
 print(soup.prettify())
 
 
+
 # get the text from each repo
-soup.find_all('p',class_='col-9 color-fg-muted my-1 pr-4')
+descriptions = soup.find_all('p',class_='col-9 color-fg-muted my-1 pr-4')
+output_descriptions = []
+for i in descriptions: #for x in y:
+    print(i.text)
+    data = i.text
+    output_descriptions.append(data)
+
+len(output_descriptions)
+output_descriptions[1]
+output_descriptions[3]
 
 # get the programming language from each repo
 p_langauge = soup.find_all('span',attrs={'itemprop': 'programmingLanguage'})
 # for each item in p_langauge, print the text
-for item in p_langauge:
-    print(item.text)
+for language in p_langauge:
+    print(language.text)
+
+repo_stairs = stars.findall('a', class_ = '')
+for i in repo_stairs
+    
 
 
 # find each article where class='Box-row'
